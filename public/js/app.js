@@ -1,6 +1,8 @@
 const navbar = document.querySelector(".nav");
 const logo = document.querySelector("#logo");
 const exitNav = document.querySelector(".close-nav");
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
 
 function openNav() {
   let navOpen = false;

@@ -11,6 +11,67 @@ body{
     background: linear-gradient(135deg, #817d7e 0%,#ddd2dd 48%,#7d7986 100%);
     background-size: cover;
 }
+/* Landing Page */
+.landing-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.landing-title {
+    display: inline-block;
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'billabongregular';
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    border-bottom:1px solid rgba(66, 129, 126, 0.384);
+}
+
+.landing-title span {
+    transition: all 0.3s;
+    z-index: 2;
+}
+.landing-title span:nth-last-child(1):hover {
+    font-size: 78px;
+    transform: skew(-15deg);
+    color: rgb(214, 172, 58);
+    -webkit-text-stroke: 3px rgba(255,255,255,0.04);
+}
+.landing-title span:hover {
+    font-size: 58px;
+    transform: skew(15deg);
+    color: rgb(58, 183, 214);
+    -webkit-text-stroke: 1px black;
+}
+.landing-p {
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    width: 80%;
+    text-align: center;
+}
+.landing-btn{
+    padding: 12px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(58, 183, 214);
+    color: #333333;
+}
+.landing-btn:hover{
+    opacity: 0.9
+}
+/* Home Page */
 #logo{
     text-align: right;
 }
@@ -74,9 +135,7 @@ body{
 .d-block{
     max-height: 500px;
 }
-/* .typewriter{
-    text-align: center;
-} */
+
 .menu-logo{
     width: 80%;
 }
@@ -132,4 +191,17 @@ footer{
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
+}
+
+/* Custom Billabong font */
+@font-face {
+    font-family: 'billabongregular';
+    src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot');
+    src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff') format('woff'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf') format('truetype'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
