@@ -10,10 +10,57 @@ body{
     background: #ddd2dd;
     background: linear-gradient(135deg, #817d7e 0%,#ddd2dd 48%,#7d7986 100%);
     background-size: cover;
+    min-height: 100vh;
+}
+
+/* CSS loader */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.loader {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+
+.circle {
+    display: inline-block;
+    background-color: blueviolet;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+}
+
+.circle:nth-child(2) {
+    background-color: palevioletred;
+    animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1)
+    }
 }
 /* Landing Page */
+.main {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
 .landing-div{
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +69,6 @@ body{
 }
 .landing-title {
     display: inline-block;
-    /* font-family: 'Lobster', cursive; */
     font-family: 'billabongregular';
     font-size: 48px;
     font-weight: 300;

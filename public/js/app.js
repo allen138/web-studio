@@ -2,7 +2,23 @@ const navbar = document.querySelector(".nav");
 const logo = document.querySelector("#logo");
 const exitNav = document.querySelector(".close-nav");
 const loader = document.querySelector('.loader');
+const loaderContainer = document.querySelector('.loader-container');
 const main = document.querySelector('.main');
+
+// css loader
+function init() {
+  setTimeout(() => {
+      loader.style.opacity = 0;
+      loader.style.display = 'none';
+      loaderContainer.style.display = 'none';
+      main.style.display = 'block';
+      setTimeout(() => {
+          main.style.opacity = 1
+      }, 50)
+  }, 4000)
+}
+
+init();
 
 function openNav() {
   let navOpen = false;
